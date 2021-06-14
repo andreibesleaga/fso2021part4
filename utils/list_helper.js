@@ -29,15 +29,14 @@ const mostBlogsByAuthor = (blogs) => {
 const mostLikesByAuthor = (blogs) => {
     var byAuthor = _.groupBy(blogs,'likes')
     var maxLikes = 0
+    var rauthor = ''
     _.forEach(byAuthor, (value, key) => {
-        maxLikes = key>maxLikes ? value[0].likes : maxLikes
-    })
-    _.forEach(byAuthor, (value, key) => {
-        if(key==maxLikes) { 
-            console.log(value[0].author)
-            return value[0].author
+        if(key>maxLikes) {
+            maxLikes = value[0].likes
+            rauthor = value[0].author
         }
     })
+    return rauthor
 }
 
 module.exports = {
