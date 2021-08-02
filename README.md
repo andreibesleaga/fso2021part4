@@ -1,3 +1,3 @@
-# FSO 2021 Part 4
+# Full Stack Open 2021 - 6
 
 Testing Express servers, user administration
